@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import imp
 from pathlib import Path
 import os
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-v-xvyysf)j2^2!gqap6^6z@h7uf$6ng54u=k&p8&mxo++i2ybl
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1','worldtvstudio.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,8 +78,11 @@ WSGI_APPLICATION = 'web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db1',
+        'USER':'postgres',
+        'PASSWORD':'Faizan@111',
+        'HOST':'Localhost'
     }
 }
 
@@ -117,7 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/static/'
+
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 MEDIA_URL='/media/'
 # Default primary key field type
@@ -127,8 +131,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #manual typed
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'static_root')
+STATIC_ROOT=os.join(BASE_DIR, 'staticfiles')
+
+
+ 
+STATIC_URL = '/static/'
