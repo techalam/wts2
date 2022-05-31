@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-v-xvyysf)j2^2!gqap6^6z@h7uf$6ng54u=k&p8&mxo++i2ybl
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['worldtvstudio.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','worldtvstudio.herokuapp.com']
 
 
 # Application definition
