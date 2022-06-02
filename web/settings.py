@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'db1',
         'USER':'postgres',
         'PASSWORD':'Faizan@111',
-        'HOST':'Localhost'
+        'HOST':'herokuapp.com'
         
     }}
 import dj_database_url
